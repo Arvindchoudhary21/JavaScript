@@ -72,3 +72,23 @@ console.log(another_id); //symbol hi type hai
 //        Object  =>  object
 
   
+// **************stack and heap memory in javascript**************************
+// 1. stack is used in primitive data types jo ki uper me defined hai ok
+// example 
+let myname = "arvind";
+let othername = myname; //so myname ka copy othername me transfer ho jayega 
+othername = "prakash"; // ye kiya to myname change nhi hoga but other name change hoga
+// so myname stack me hai apna and othername bhi stack me hai and change hua abhi
+
+// 2. heap is used in all non primitive data types jo uper defined hai
+let userOne = {
+    username : "arvind",
+    email : "user@gmail.com",
+}
+let userTwo = userOne;
+// so if we change userTwo then it will reflect in userOne also ok 
+userTwo.username = "aradhya";
+console.log(userOne); // so change kiya main userTwo me but change userOne me bhi 
+// show kr rha so ye heap me store hote hai and ek hi address space ko point kr rhe the
+// dono userOne and userTwo and ek bhi change hua to dono me reflect krega ok
+console.log(userTwo); // same output isme bhi
