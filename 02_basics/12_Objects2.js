@@ -5,7 +5,7 @@ const tinderuser = new Object();
 // const tinderuser = {}; both are same 
 tinderuser.id = 123;
 tinderuser.Name = "arvind";
-// console.log(tinderuser); //output the object
+console.log(tinderuser); //output the object
 
 
 // ab object ke andar object 
@@ -53,7 +53,7 @@ console.log(obj5);
 
 
 
-// object me object how to access
+// array me object how to access
 const users = [
     {
         Name : "arvind",
