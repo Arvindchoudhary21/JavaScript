@@ -100,3 +100,6 @@ console.log(newtinderuser.hasOwnProperty('email'));//true because email hai obje
 
 
 
+
+
+
