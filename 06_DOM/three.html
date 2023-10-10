@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+<body style="background-color:#212121; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script>
+        // write javascript here
+        const parent = document.querySelector('.parent');
+        console.log(parent); // this will output in the console of chrome 
+        // sare mil jayenge from monday to thursday 
+
+        console.log(parent.children); 
+        // this will print all the children of parent class
+        // and ye return krega html collection so gaur krna ispe
+
+        console.log(parent.children[0].innerHTML);
+        // this will print first children ka innerHTML jo ki Monday hai ok
+
+
+
+        // par tum HTML collection for simple wala for loop use kr sakte ho 
+        // for example 
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML);
+        }
+        // this will print all from Monday to Thursday 
+
+
+        // monday ka color bhi change kr sakte ho like previous class me kiye the 
+        parent.children[0].style.color = 'red';
+        // this will convert the color of monday from white to red
+
+
+
+        console.log(parent.firstElementChild);
+        // it will give me first child jo ki element hai of the class parent ok
+        // ye bat yad rakhna 
+        // same last element child bhi le sakte ho
+        console.log(parent.lastElementChild);
+
+
+
+        // so uper me tum parent se first element par ja rhe ho but 
+        // child se parent par bhi ja sakte ho like this 
+        const dayone = document.querySelector('.day')//it will output the first element
+        // of the class day jo bhi element ka class day hai onka first element
+        console.log(dayone);
+        // now go to the parent of dayone 
+        console.log(dayone.parentElement);
+        // isse tumko parent element milega jo bhi dayone ka parent element hai wo 
+        // console me dekh bhi sakte ho ok 
+
+
+        // ab tum monday ka next jo hai tuesday wo sibling hua monday ka ospar bhi
+        // tum ja sakte ho like this 
+        console.log(dayone.nextElementSibling);
+        // return the tuesday element ok
+
+
+
+
+        // also we can print all the child nodes of a class like this 
+        console.log(parent.childNodes);
+        // this will output all the nodes jo ki child node hai is parent class ke
+        // showing 9 child nodes (also white space bhi count hota hai as node)
+
+
+
+    </script>
+
+</body>
+</html>
