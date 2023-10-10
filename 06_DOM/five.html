@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // designing the function to add list of language ok jaise uper me javascript hai
+    // wais hi aur language ko add krna hai
+    function addLanguage(langName) {
+        // first step is to create a list element 
+        const li = document.createElement('li');
+        // ab jo langName pass hua hai osko as text dalna hai in list
+        li.innerHTML = `${langName}`;
+        // ab add kro matlab append kro in class language
+        document.querySelector('.language').appendChild(li);
+    }
+    // now call function with a argument and see ki add hota hai ya nhi
+    addLanguage("C++");
+    addLanguage("C");
+
+
+    // so dekho ye uper wala function me li add krne ke liye pura tree traverse krna
+    // hoga to add the list item at the end but agar tree bada ho to bhot jyada 
+    // time complexity ho jayega so isko optimize way me krne ka tarika bhi dekhna 
+    // hoga so lets see the optimize way to add list in the list item ok
+
+    function addLangOptimally(LangName) {
+        const li = document.createElement('li');
+        // isme humlog li me ek text node create krke osko append kr rhe hai ok
+        li.appendChild(document.createTextNode(LangName));
+        // ab jo class hai language osme append kro li ko
+        document.querySelector('.language').appendChild(li);
+    }
+    // ye thora optimized way hai kiuki isme pura tree traverse nhi krna hoga 
+    // so isko yad rakhna 
+    addLangOptimally("Java");
+
+
+
+
+    // now how to edit this values lets see
+    // so agar 2nd value change krna hai to use this 
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // uper wala code me -> dekho ye list item ke 2nd child ko select krega 
+    // hamare case me ye c++ hai so isko select krega 
+    // #note -> koi bhi gap nhi hona chahiye isme -> "li:nth-child(2)" be careful
+    // now ab create a list item
+    const li = document.createElement('li');
+    li.textContent = "C#"; // innerhtml ya uper function wala method bhi use kr sakte ho
+    // so li me c# insert kr diye ab isko replace krna hai with c++ so use this
+    secondLang.replaceWith(li);
+
+
+
+    // replace javascript with typescript
+    const firstlang = document.querySelector("li:nth-child(1)"); 
+    //("li:first-child") -> ye bhi correct hai yha par ok kiuki first child lena hai
+    // now firstlang me javascript as list store ho gya 
+    // create a node of li having typescirpt as text 
+    const li2 = document.createElement('li');
+    li2.appendChild(document.createTextNode("Typescript"));
+    // just replace with first firstlang
+    firstlang.replaceWith(li2);
+    // and done
+
+
+
+
+
+
+
+    // replace typescirpt with C++
+    const newfirst = document.querySelector("li:first-child");
+    newfirst.outerHTML = '<li>C++</li>';
+    // this is the simplest method to edit or replace the name of any list item
+
+
+
+
+
+
+
+
+    // how to remove list item see this 
+    // remove last language 
+    const lastlang = document.querySelector("li:last-child");
+    lastlang.remove();
+    // it will remove java from the list  
+
+
+</script>
+</html>
