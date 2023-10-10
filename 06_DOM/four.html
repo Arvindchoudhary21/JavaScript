@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code javascript</title>
+</head>
+<body style="background-color:#212121; color: white;">
+    
+</body>
+<script>
+    // ab humlog using the javascript ek div element create krenge ok
+    // and h1 and h2 kuch bhi create kr sakte hai ok
+    const CreatedDiv = document.createElement('div');
+    console.log(CreatedDiv);
+    // adding class name to the div element
+    CreatedDiv.className = 'main';
+    // adding id to the created div 
+    CreatedDiv.id = 'myid';
+    // now look at console class and id dono add ho gya div me dekh sakte ho
+
+    // adding title to the created div element
+    // dekho id and classname direct set ho gya but aur attribute set krne ke liye 
+    // tumko set attribute use krna hoga
+    CreatedDiv.setAttribute('title' , 'new title');
+
+
+    // style bhi add kr sakte hai created div me 
+    CreatedDiv.style.backgroundColor = "red";
+    // adding padding 
+    CreatedDiv.style.padding = "12px";
+
+    // adding text to the created div
+    // CreatedDiv.innerHTML = "hello arvind choudhary my friend";
+
+    // also humlog ek alag node bana ke attach kr sakte hai text ko like this 
+    const textnode = document.createTextNode("hello arvind choudhary my friend");
+    CreatedDiv.appendChild(textnode);
+    //appendChild method se wo append ho jayega created div se
+
+    
+    // now ab attach krenge div ko ki wo page par show krega ok kiuki abhi tak wo div
+    // memery me hai but ab attach karenge page par 
+    document.body.appendChild(CreatedDiv);
+
+
+    // ab tum simple ye pura code ko ek function me likh sakte ho creatediv name se 
+    // and color wagera pass kr sakte ho and bar bar wo div create krte jayega simple 
+    // loop wagera se bhi multiple color wala div bana sakte ho ok matlab 
+    // isko use kaise krna hai wo sikho ok
+
+</script>
+</html>
