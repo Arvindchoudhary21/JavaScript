@@ -16,7 +16,7 @@ buttons.forEach(function (button) {
   // now ab button par ka click event ko humlog ko
   // dekhna hai and osko use krna hai
   button.addEventListener('click', function (e) {
-    // console.log(e); // it tells ki kon sa even ho rha like
+    // console.log(e); // it tells ki kon sa event ho rha like
     // yha par pointer event ho rha jab tum click kr rhe ho
     // kisi bhi color par
     // console.log(e.target); // ye bata rha hai ki jo tum
