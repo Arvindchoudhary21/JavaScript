@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // I will write the comments as notes ok so read carefully ok
+
+    // read about this events 
+    /*
+    ye sab chrome ke console me dikhenge jab tum event ko console log kroge to
+    1. type , 2. timestamp , 3. default prevented , 4. target , 5. toElement , 6. srcElement
+    7. currentTarget , 8. clientX , 9. clientY , 10. screenX , 11. screenY , 12. altkey , 
+    13. ctrl key , 14. shift key , 15. keyCode
+    */
+
+    // so if click on picture(owl) then an alert will show -> method to do this
+    // this method is good but do this by event for have wider features(modern way) (line 51)
+    // document.getElementById('owl').onclick = function(){
+    //     alert('own is clicked');
+    // }
+
+    // see names of event on mdn so that you can use the correct spelling of events
+    // document.getElementById('images').addEventListener('click' , function(){
+    //     alert('url clicked');
+    // },false) // yha false bhi hota hai but ye default hota hai ok
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //     alert('owl is clicked');
+    //     e.stopPropagation();//similar -> preventDefault matlab ye krne se wo url clicked par nhi jayega 
+    // },false) // yha false bhi hota hai but ye default hota hai ok
+
+    // meaning of true and false in uper wala function ->
+    /*
+    if both is false then dekho event dono par laga hai pura images div pr and owl wale image par
+    so click krne se pehle owl wala alert show krega fir url clicked show krega (called bubbling)
+    but agar dono value ko true kr doge so pehle url clicked print hoga fir owl is clicked print hoga 
+    and it called capturing mode 
+    */  
+
+
+    // example of preventDefault()
+    // we will click on google but google site will not open ok 
+    document.getElementById('google').addEventListener('click' , function(e){
+        console.log("google is clicked"); // ye to show krega but click krne par google nhi khulega
+        e.preventDefault();
+        // if you want to stop bubbling also then do this 
+        e.stopPropagation(); // ab wo url clicked wala output bhi nhi ayega ok
+    }, false)
+
+
+    // function to delete image when clicked on image
+    // 1. select whole div because we want to select all the images
+    document.querySelector('#images').addEventListener('click' , function(e){
+        // console.log(e.target.tagName); //print the tag name 
+        // we want to define that if target is tagname then delete nhi to ye pura ul hi delete kr dega
+        if(e.target.tagName === 'IMG'){
+            // console.log(e.target.id); // print id jaha click ho rha hai
+            const removeimage = e.target.parentNode;
+            removeimage.remove(); //remember remove function is used to remove the item 
+        }
+
+    }, false)
+    
+</script>
+
+</html>
