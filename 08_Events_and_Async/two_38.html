@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // For notes I will write here and for output you can open console in browser
+
+    // About SetTimeout
+    // it is not part of core javascript
+    // printing name at 2 sec interval
+    // set time out me function ek bar execute hoga but set interval me bar bar print hoga after interval
+    setTimeout(() => {
+        console.log("arvind");
+    }, 2000);
+
+    // also you can give reference of function in set time out method for example
+    function printhello(){
+        console.log(("hello arvind"));
+    }
+    setTimeout(printhello, 3000); //dont write printhello() ye call ho jayega but sirf reference dena hai
+    // it will do the same thing (you can see on console ok)
+
+
+    // new*
+    // !ab main kuch sec bad h1 ka title change krna chahta hu ki wo 2 sec bad change ho then 
+    // function changeh1Name(){
+    //     document.querySelector('h1').innerHTML = "Chai aur Javascript"; 
+    // }
+    // setTimeout(changeh1Name, 4000);
+
+
+    // new*
+    //! ab change hone se pehle rokne ka method -> clearTimeout
+    function changeh1Name(){
+        document.querySelector('h1').innerHTML = "Chai aur Javascript"; 
+    }
+    const changeme = setTimeout(changeh1Name, 4000);  
+    // clearTimeout(changeme); //ab change nhi hoga name so 
+    //! applying cleartimeout on event -> jo button hai stop ospe lagaunga ok
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeme);
+        console.log("Stopped");
+        //! agar tum 4 sec se pehle stop button par click kr doge to h1 change nhi hoga 
+    })
+
+</script>
+</html>

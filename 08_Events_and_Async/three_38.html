@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //! For notes I will write here and for output you can open console in browser
+
+    // new*
+    //! about setInterval
+    //! ye print krte jayega ek fixed time interval par for example
+    // setInterval(function(){
+    // console.log("hello arvind choudhary" , Date.now().toLocaleString());
+    // },4000)
+
+
+    //new*
+    //! function bana ke bhi function ka refernce pass kr sakte hai like this 
+    // function printName(str){
+    //     console.log(`hello ${str} choudhary` , Date.now().toLocaleString());
+    // }
+    // const namePrinter = setInterval(printName, 2000 , "arvind"); //!isme paramter bhi pass kr sakte hai 
+    //! (nhi bhi parameter pass kroge to work karega but just for knowlegde know it)
+
+
+    // new*
+    //! clearInterval -> to stop the loop created by setInterval 
+    // clearInterval(namePrinter);
+
+
+    // !new*
+    // !ab start button se printing start ho and stop button se printing end ho 
+    // !we need to store the reference 
+    let refernceOfFunction;
+    document.getElementById('start').addEventListener('click', function () {
+        refernceOfFunction = setInterval(() => {
+        console.log("hello arvind choudhary", Date.now().toLocaleString());
+    }, 2000);
+    })
+    document.getElementById('stop').addEventListener('click', function () {
+        clearInterval(refernceOfFunction);
+    })
+</script>
+
+</html>
