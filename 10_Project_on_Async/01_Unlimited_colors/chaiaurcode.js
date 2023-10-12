@@ -15,8 +15,11 @@ let refernce;
 function startchanging() {
     if (!refernce) {
         refernce = setInterval(changecolor, 1000);
-    }   
-    function changecolor(){
+        const text = document.getElementById('check');
+        text.innerHTML = 'Already Started';
+    }
+    
+    function changecolor() {
         document.body.style.backgroundColor = randomColor();
     }
 }
@@ -24,7 +27,9 @@ function startchanging() {
 // !add clearInterval to stop changing the background color
 function stopchanging() {
     clearInterval(refernce);
-    refernce = null; 
+    refernce = null;
+    const text = document.getElementById('check');
+    text.innerHTML = 'Yet to start';
 }
 
 document.getElementById('start').addEventListener('click', startchanging);
