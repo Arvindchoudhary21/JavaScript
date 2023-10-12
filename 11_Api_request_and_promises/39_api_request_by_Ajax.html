@@ -54,7 +54,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
             const imageLink = data.avatar_url;
             console.log((imageLink));
             document.getElementById('avatar').src = 'https://avatars.githubusercontent.com/u/121598096?v=4';
-            document.getElementById('name').innerHTML = 'arvind';
+            document.getElementById('name').innerHTML = data.login;
             document.getElementsByClassName("role")[0].innerHTML = 'Engineer';
 
         }
