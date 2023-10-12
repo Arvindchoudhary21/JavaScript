@@ -23,28 +23,46 @@ https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
     3 LOADING Downloading; responseText holds partial data.
     <br>
     4 DONE The operation is complete.
+
+    <div class="card">
+        <img id="avatar" src="img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b id="name">John Doe</b></h4>
+            <p class="role">Architect & Engineer</p>
+        </div>
+    </div>
 </body>
 <script>
     // !method to send and recieve data
-    const requestURL = 'https://api.github.com/users/Arvindchoudhary21'; 
+    const requestURL = 'https://api.github.com/users/Arvindchoudhary21';
     const xhr = new XMLHttpRequest();
     // !use open to set request
-    xhr.open('GET' , requestURL);
-    // !output on stage change from 0 to 1 and t to 2 (documentation me hai state 1 and 2 dekho uper padho)
-    xhr.onreadystatechange = function(){
-        console.log(xhr.readyState);//!returns states of kon sa state call ho rha hai(output 2 3 4 int cosole)
+    xhr.open('GET', requestURL);
+    // !output of stages change from 0 to 1 and 1 to 2 (documentation me hai state 1 and 2 dekho uper padho)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);//!returns states of kon sa state call ho rha hai(output 2 3 4 in cosole)
         // !output responsetext when state becomes 4
-        if(xhr.readyState === 4){
+        if (xhr.readyState === 4) {
             // console.log(this.responseText); //!console me pura api recieve show kr rha dekh lo
             // !so store this data and you can see the information recieved from url
             const data = JSON.parse(this.responseText); //data recieved in string so convert it to JSON file
-            console.log(data.login); //showing undefined because respone string me aya hai from url so 
+            console.log(data); //showing undefined because respone string me aya hai from url so 
             // !isko jason file me convert kr diya hu uper dekh lo
             // !now ab console me name print ho rha hai kiuki login -> name hi hai ok dekh lo console me  
+
+            // !as told to create card so create this 
+            const imageLink = data.avatar_url;
+            console.log((imageLink));
+            document.getElementById('avatar').src = 'https://avatars.githubusercontent.com/u/121598096?v=4';
+            document.getElementById('name').innerHTML = 'arvind';
+            document.getElementsByClassName("role")[0].innerHTML = 'Engineer';
+
         }
-               
+
     }
+    
     // !call the open
     xhr.send();
 </script>
+
 </html>
