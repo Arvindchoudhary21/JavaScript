@@ -20,12 +20,7 @@ promiseOne.then(function () {
     console.log("Promise Consumed");
 })
 
-console.log("arvind");
-console.log("arvind");
-console.log("arvind");
-console.log("arvind");
-console.log("arvind");
-console.log("arvind");
+
 // *new
 // !method to direct create promise 
 new Promise(function (resolve, reject) {
@@ -88,7 +83,7 @@ promiseFour.then(function (user) {
 
 
 // *new
-// asynch await syntax of promise (.then .catch wala bhi use kr sakte ho jo man kre wo use kro)
+// asynch await syntax of promise (.then .catch wala syntax bhi use kr sakte ho jo man kre wo use kro)
 const promiseFive = new Promise(function (resolve, reject) {
 
     setTimeout(() => {
