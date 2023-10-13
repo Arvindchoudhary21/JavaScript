@@ -20,7 +20,12 @@ promiseOne.then(function () {
     console.log("Promise Consumed");
 })
 
-
+console.log("arvind");
+console.log("arvind");
+console.log("arvind");
+console.log("arvind");
+console.log("arvind");
+console.log("arvind");
 // *new
 // !method to direct create promise 
 new Promise(function (resolve, reject) {
