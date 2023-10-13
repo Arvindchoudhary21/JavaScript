@@ -19,5 +19,5 @@ fetch('https://api.github.com/users/Arvindchoudhary21')
 /*
     fetch ka jo bhi call hai wo jata hai microtask queue / priority queue / fetch queue jo ki ye bhot
     high priority queue hai isiliye previous code me fetch wala output first me aa rha tha 
-    bak sab output last me aa rhe the (see diagram)
+    baki sab output last me aa rhe the (see diagram)
 */ 
