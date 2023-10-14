@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function init() {
+        let name = "Mozilla"; // name is a local variable created by init
+        function displayName() {
+            // displayName() is the inner function, that forms the closure
+            console.log(name); // use variable declared in the parent function
+        }
+        displayName();
+    }
+    init();
+    // !closure itna hi hai ki tum parent ka variable use kr sakte ho but parent 
+    // !child ka variable use nhi kr sakta and 2 sibling ek dusre ka bhi use nhi kr 
+    // !sakte ok
+</script>
+
+</html>

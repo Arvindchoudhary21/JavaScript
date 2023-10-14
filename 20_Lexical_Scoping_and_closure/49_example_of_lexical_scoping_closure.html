@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Lexical Scoping Example</title>
+</head>
+<body>
+    <button id="green">Green</button>
+    <button id="yellow">yello</button>
+</body>
+<script>
+    
+    function changebackground(color){
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
+            // !bina backticks ke likho ge to run nhi krega ye yad rakhna 
+        }
+    }
+
+    document.getElementById('green').addEventListener('click' , changebackground('green'));
+    document.getElementById('yellow').addEventListener('click' , changebackground('yellow'));
+</script>
+</html>
