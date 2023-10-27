@@ -26,7 +26,7 @@ const mytimestamp = Date.now();
 console.log(mytimestamp);
 console.log(newDate2.getTime());//time form 1 jan 1970 to newdate2 ok
 // Date.now give in milisecond so to convert in seconds divide by 1000
-console.log(Math.floor(mytimestamp/1000)); //in seconds
+console.log(Math.floor(mytimestamp / 1000)); //in seconds
 
 // so date ke bohot method hai jisse tum present day ka month kya hai jan sakte ho
 // by getMonth() yhi sb aur bhi hai so yad rakhna bas
@@ -34,6 +34,7 @@ console.log(Math.floor(mytimestamp/1000)); //in seconds
 
 
 // we can do things with tolocalestring ok
-newDate.toLocaleString('default' , {
-    weekday : "long" // means ki ab jan nhi january print hoga ok 
+newDate.toLocaleString('default', {
+    weekday: "long" // means ki ab jan nhi january print hoga ok 
 })
+8

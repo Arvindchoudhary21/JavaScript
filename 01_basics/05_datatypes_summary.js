@@ -29,14 +29,14 @@ let big_number = 85478794654n;
 console.log(big_number);
 
 // array
-let heros = ["shaktiman" , "spiderman" , "perman" , "iron man"];
+let heros = ["shaktiman", "spiderman", "perman", "iron man"];
 console.log(heros[3]); //print iron man
 
 // object 
 let obj = {
-    Name : "arvind", 
-    age : 22,
-    home : "kolkata"
+    Name: "arvind",
+    age: 22,
+    home: "kolkata"
 }
 console.log(obj); //prints the obj
 
@@ -44,7 +44,7 @@ console.log(obj); //prints the obj
 const square = function (number) {
     return number * number;
 };
-  
+
 console.log(square(4)); //output = 16
 
 // also we can know the type of value by typeof method
@@ -53,6 +53,7 @@ console.log(typeof square); //output is function kiuki square ek function hai
 console.log(typeof heros); // object
 console.log(typeof obj); //object
 console.log(id); //symbol hi type hai
+console.log("arvind arvind");
 console.log(another_id); //symbol hi type hai
 
 
@@ -71,7 +72,7 @@ console.log(another_id); //symbol hi type hai
 //        Function  =>  function
 //        Object  =>  object
 
-  
+
 // **************stack and heap memory in javascript**************************
 // 1. stack is used in primitive data types jo ki uper me defined hai ok
 // example 
@@ -82,8 +83,8 @@ othername = "prakash"; // ye kiya to myname change nhi hoga but other name chang
 
 // 2. heap is used in all non primitive data types jo uper defined hai
 let userOne = {
-    username : "arvind",
-    email : "user@gmail.com",
+    username: "arvind",
+    email: "user@gmail.com",
 }
 let userTwo = userOne;
 // so if we change userTwo then it will reflect in userOne also ok 

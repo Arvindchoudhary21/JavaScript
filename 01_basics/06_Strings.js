@@ -3,7 +3,7 @@ const cnt = 5;
 console.log(name + cnt); // this is bad syntax
 
 // in modern days use backticks which uses string interpolation
-console.log(`my name is ${name} and cnt is ${cnt}`); 
+console.log(`my name is ${name} and cnt is ${cnt}`);
 // this is used in modern days so use this
 
 // other way to declare string
@@ -17,14 +17,14 @@ console.log(gameName.charAt(5)); // tells ki 5th index par kya hai
 console.log(gameName.indexOf('a')); // tells ki d kis index pr hai
 // if same character multiple time hone se jo sabse pehle milega oska index return krega
 
-const newString = gameName.substring(0 , 3);//3rd index include nhi hoga 0 1 2 index
+const newString = gameName.substring(0, 3);//3rd index include nhi hoga 0 1 2 index
 // include hoga  
 console.log(newString);
 
-const anotherString = gameName.slice(-2 , 10); // same as substring ok but we can give
+const anotherString = gameName.slice(-2, 10); // same as substring ok but we can give
 // negative value of index here also -> -1 means n-1 index and -2 means n-2 index and 
 // so on ok yad rakhna and second parameter end point hai and wo consider nhi hota
-console.log(anotherString); 
+console.log(anotherString);
 
 // trim function
 const newStringOne = "  arvind  "; // to remove spaces use the trim method
@@ -34,7 +34,7 @@ console.log(newStringTwo); // without spaces string printed
 
 // replace method
 const str = "arvindchoudhary";
-console.log(str.replace('cho' , 'ar'));//ye cho ko ar me change kr dega
+console.log(str.replace('cho', 'ar'));//ye cho ko ar me change kr dega
 // note agar multiple cho honge string me to ye pehla ko hi change krega ok baki sab 
 // waise hi rhenge ok
 
