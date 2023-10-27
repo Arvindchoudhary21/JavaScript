@@ -15,8 +15,7 @@ console.log(null >= 0);//output true because equality is different from comparis
 // we know ki undefined to undefined hi reh jata hai wo kisi value me convert nhi hota
 console.log(undefined >= 0);//or >= or <= > < har case me false hi ayega ok
 
-// ** === 
-// ye check me conversion nhi hota and datatype same rehne par hi conversion hoga 
-// warna conversion hoga hi nhi
+// ** ===
+// ye check me conversion nhi hota and datatype same rehne par hi true hoga warna true hoga hi nhi
 
 // so avoid this type of comparison and always compare with the same datatype ok
