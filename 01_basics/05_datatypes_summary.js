@@ -93,3 +93,5 @@ console.log(userOne); // so change kiya main userTwo me but change userOne me bh
 // show kr rha so ye heap me store hote hai and ek hi address space ko point kr rhe the
 // dono userOne and userTwo and ek bhi change hua to dono me reflect krega ok
 console.log(userTwo); // same output isme bhi
+
+// same goes to array also osme bhi change ho jayega agar tum copy array me changes kroge 

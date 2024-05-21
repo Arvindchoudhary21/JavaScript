@@ -68,8 +68,8 @@ console.log(b2_inString); // output is 11 but in string
 console.log("type of b2_inString = ", typeof b2_inString);
 
 // ********************operations ****************
-
-console.log("2 ka power 3 = " + 2 ** 10); // this will give 2 power 2 ok yad rakhna 
+console.log("arrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
+console.log("2 ka power 10 = " + 2 ** 10); // this will give 2 power 10 ok yad rakhna 
 
 console.log("2" + 1);//output will be 21 not 3
 // but
