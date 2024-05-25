@@ -125,7 +125,7 @@ async function getUser() {
     try {
         const respone = await fetch('https://api.github.com/users/Arvindchoudhary21');
         // !data string me ata hai so convert it to json
-        const data = await respone.json(); //!isme bhi await use krna hoga kiuki respone ane me time lagta hai 
+        const data = await respone.json(); //!isme bhi await use krna hoga kiuki response convert hone me time lagta hai 
         // !ekdam quick to ata nhi so isiliye await use krna hoga
         console.log(data);
     } catch (error) {
