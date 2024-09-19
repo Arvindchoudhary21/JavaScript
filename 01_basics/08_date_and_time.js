@@ -37,4 +37,3 @@ console.log(Math.floor(mytimestamp / 1000)); //in seconds
 newDate.toLocaleString('default', {
     weekday: "long" // means ki ab jan nhi january print hoga ok 
 })
-8

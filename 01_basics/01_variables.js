@@ -29,8 +29,8 @@ if (true) {
 console.log("b = " + b); //b 1 ka 1 hi hai but uper me var me a change ho gya so it is the problem of var 
 // so dont use var only use let and const ok
 
-// **
-let accoutState; //it will contain the value indefined ok so yad rakhna 
+
+let accoutState; //it will contain the value unidentified ok so yad rakhna 
 
 // also table ke form me console kr sakte hai hum
 console.table([accountId, accoutState, accout_name]);

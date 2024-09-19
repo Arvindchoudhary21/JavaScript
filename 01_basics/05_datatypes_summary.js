@@ -95,3 +95,11 @@ console.log(userOne); // so change kiya main userTwo me but change userOne me bh
 console.log(userTwo); // same output isme bhi
 
 // same goes to array also osme bhi change ho jayega agar tum copy array me changes kroge 
+// so pure copy banane ke liye spread method use kro and copy banao fir change nhi hoga so do like this
+let arr = [1,2,3,4];
+let arr2 = [...arr];
+let ob = {
+    name : "arvind",
+    location : "kolkata"
+}
+let ob2 = {...ob};
