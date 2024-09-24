@@ -5,7 +5,7 @@
 // !function bhi object ki tarah hi work kr sakta hai for example
 function multiplyby4(num){
     return num * 4;
-}
+} 
 multiplyby4.arvind = 6; //!function ka hi object bana liya 
 console.log((multiplyby4(3)));
 console.log(multiplyby4.arvind); //! print 6 so function has an insatace as arvind 
